@@ -21,6 +21,6 @@
         "ms-vscode-remote.remote-containers"
       ]
     }
-  }
+  },
   "postCreateCommand": ".devcontainer/postCreate.sh"
 }
