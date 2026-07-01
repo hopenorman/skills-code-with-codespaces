@@ -1,4 +1,26 @@
 {
   "name": "Basic Dev Environment",
-  "image": "mcr.microsoft.com/devcontainers/base:debian"
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "installTools": true,
+      "optimize": true,
+      "enableShared": true,
+      "installJupyterlab": true,
+      "version": "3.10"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.vscode-python-envs",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "GitHub.codespaces",
+        "ms-vscode-remote.remote-containers"
+      ]
+    }
+  }
+  "postCreateCommand": ".devcontainer/postCreate.sh"
 }
